@@ -9,6 +9,8 @@ namespace Singleton {
 		/// fruehe Initialisierung
 		/// </summary>
 		///
+
+		//readonly moeglich!!
 		static UserContext instance = new UserContext();// frueh initialisiert, nicht erst durch if Abfrage spaeter
 
 		#region
@@ -24,11 +26,9 @@ namespace Singleton {
 		#endregion
 		private UserContext() { }
 
-		public static UserContext Instance{ //public natuerlich damit man extern darauf zugreift
-			get {
-				return instance;
-			}
-		}		
+		public static UserContext Instance { //public natuerlich damit man extern darauf zugreift
+			get => instance;
+		}
 	}
 }
 
